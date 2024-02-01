@@ -32,7 +32,7 @@ function App() {
         <button onClick={() => setCount((count) => count - 1)}>
           Decrement
         </button>
-       
+
       </div>
 
       <SimpleCounter />
