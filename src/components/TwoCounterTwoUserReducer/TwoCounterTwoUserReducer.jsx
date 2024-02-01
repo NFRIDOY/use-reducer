@@ -1,5 +1,9 @@
 import { useReducer } from 'react'
 
+/**
+ * This is more efficient and easy than object implementation
+ */
+
 const initalState = 0;
 const initalState2 = 100;
 const reducer = (state, action) => {
