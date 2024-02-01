@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import SimpleCounter from './components/SimpleCounter/SimpleCounter'
 import ComplexCounter from './components/ComplexCounter/ComplexCounter'
+import TwoCounterTwoUserReducer from './components/TwoCounterTwoUserReducer/TwoCounterTwoUserReducer'
 
 
 
@@ -37,6 +38,7 @@ function App() {
 
       <SimpleCounter />
       <ComplexCounter />
+      <TwoCounterTwoUserReducer />
     </>
   )
 }

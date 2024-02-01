@@ -1,5 +1,10 @@
 import { useReducer } from "react";
 
+/**
+ * This object patter is used to handle global state mangement
+ * But this is a local state example 
+ */
+
 const initalState = {
     counter: 0, // counter1
     counter2: 0, // counter2
@@ -25,7 +30,7 @@ export default function ComplexCounter() {
     const [state, dispatch] = useReducer(reducer, initalState);
 
     return (
-        <div>
+        <div style={{margin: "20px", padding: "20px", border: "2px solid red"}}>
             <h2>
                 ComplexCounter
             </h2>
