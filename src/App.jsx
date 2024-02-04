@@ -7,10 +7,23 @@ import ComplexCounter from './components/ComplexCounter/ComplexCounter'
 import TwoCounterTwoUserReducer from './components/TwoCounterTwoUserReducer/TwoCounterTwoUserReducer'
 import Parent from './components/Parent/Parent'
 
+const adderInitalValue = 23;
+const adderReducer = (state, action) => {
+  switch (action) {
+    case "add":
+      return state + 1;
+    case "reverseAdd":
+      return state - 1;
+    default:
+      return state;
+  }
+}
+
 export const ConterContext = createContext();
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [state, dispatch] = useReducer(adderReducer, adderInitalValue)
 
 
   return (
@@ -40,7 +53,9 @@ function App() {
       <SimpleCounter />
       <ComplexCounter />
       <TwoCounterTwoUserReducer />
-      <ConterContext.Provider value={{count}}>
+
+
+      <ConterContext.Provider value={{state, dispatch}}>
         <Parent></Parent>
       </ConterContext.Provider>
 
