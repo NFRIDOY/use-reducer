@@ -6,6 +6,8 @@ import SimpleCounter from './components/SimpleCounter/SimpleCounter'
 import ComplexCounter from './components/ComplexCounter/ComplexCounter'
 import TwoCounterTwoUserReducer from './components/TwoCounterTwoUserReducer/TwoCounterTwoUserReducer'
 import Parent from './components/Parent/Parent'
+import GetData from './components/GetData/GetData'
+import BorderRaper from './components/Styles/BorderRaper'
 
 const adderInitalValue = 23;
 const adderReducer = (state, action) => {
@@ -55,9 +57,16 @@ function App() {
       <TwoCounterTwoUserReducer />
 
 
-      <ConterContext.Provider value={{state, dispatch}}>
-        <Parent></Parent>
-      </ConterContext.Provider>
+      <BorderRaper >
+        <ConterContext.Provider value={{ state, dispatch }}>
+          <Parent></Parent>
+        </ConterContext.Provider>
+      </BorderRaper>
+
+      <BorderRaper colorB='green'>
+        <GetData />
+      </BorderRaper>
+
 
     </>
   )
