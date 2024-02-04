@@ -8,6 +8,7 @@ import TwoCounterTwoUserReducer from './components/TwoCounterTwoUserReducer/TwoC
 import Parent from './components/Parent/Parent'
 import GetData from './components/GetData/GetData'
 import BorderRaper from './components/Styles/BorderRaper'
+import GetData2 from './components/getData2/getData2'
 
 const adderInitalValue = 23;
 const adderReducer = (state, action) => {
@@ -65,6 +66,10 @@ function App() {
 
       <BorderRaper colorB='green'>
         <GetData />
+      </BorderRaper>
+
+      <BorderRaper colorB='red'>
+        <GetData2 />
       </BorderRaper>
 
 
