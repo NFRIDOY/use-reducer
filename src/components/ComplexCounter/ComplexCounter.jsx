@@ -9,6 +9,10 @@ const initalState = {
     counter: 0, // counter1
     counter2: 0, // counter2
 };
+
+/**
+ * ...state is to marge with the counter and counter2 values
+ */
 const reducer = (state, action) => {
     // switch state for control as action says
     switch (action?.type) {

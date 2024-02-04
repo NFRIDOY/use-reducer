@@ -7,11 +7,10 @@ export default function Child() {
     return (
         <div style={{ margin: "20px", padding: "20px", border: "2px solid blue" }}>
             <h2>
-                SimpleCounter {state}
-                {console.log(state)}
+                Adder
             </h2>
             <div>
-                <p>Counter {state}</p>
+                <p>Adder {state}</p>
                 <button onClick={() => dispatch("add")}>Add</button>
                 <button onClick={() => dispatch("reverseAdd")}>Reverse Add</button>
             </div>
