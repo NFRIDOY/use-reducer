@@ -1,12 +1,13 @@
-import { useReducer, useState } from 'react'
+import { createContext, useReducer, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import SimpleCounter from './components/SimpleCounter/SimpleCounter'
 import ComplexCounter from './components/ComplexCounter/ComplexCounter'
 import TwoCounterTwoUserReducer from './components/TwoCounterTwoUserReducer/TwoCounterTwoUserReducer'
+import Parent from './components/Parent/Parent'
 
-
+export const ConterContext = createContext();
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,6 +40,10 @@ function App() {
       <SimpleCounter />
       <ComplexCounter />
       <TwoCounterTwoUserReducer />
+      <ConterContext.Provider value={{count}}>
+        <Parent></Parent>
+      </ConterContext.Provider>
+
     </>
   )
 }
